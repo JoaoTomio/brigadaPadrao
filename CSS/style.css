@@ -1,0 +1,571 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --thirdy-color: radial-gradient(rgba(14, 23, 47, 0.0001) 11.72%, #161616 100%);
+    --primary: rgb(24, 24, 24);
+    --secundary: rgb(75, 54, 44);
+    --gray-color: rgb(48, 48, 48);
+    --linear: linear-gradient(154.23deg, #0F3A7B -58.45%, #0CFFFF 374.49% );
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+.menu-spacing{
+    height: 4.5rem;
+}
+
+.menu{
+    width: 100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:2;
+    background: rgba(0,0,0,0.9);
+}
+
+.menu h1 img{
+    width:8.5rem;
+    height:auto;
+}
+
+.menu-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-transform: uppercase;
+}
+
+.menu ul{
+    list-style: none;
+    display:flex;
+}
+
+.menu ul li a{
+    display: block;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+    position:relative;
+}
+
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0%;
+    height: 0.2rem;
+    background:yellow;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after{
+    width:60%;
+    left: 20%;
+}
+
+body, textarea{
+    color: var(--primary);
+    font: 400 1rem "Montserrat", sans-serif;
+}
+
+body::-webkit-scrollbar{
+    width: 0.2rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: rgba(255, 255, 255, 0.4);
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--secundary);
+}
+
+
+#inicio{
+    padding: 20px 5px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    display: block;
+    width: 110px;
+    height: 55px;
+}
+
+#inicio h1{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    width:100%;
+}
+
+#contato h2, #sobre h2{
+    display:flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    font-size: 25px;
+}
+
+#cursos h2{
+    display:flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    font-size: 25px;
+}
+
+.curso_list{
+    background:rgb(48, 48, 48);
+    overflow-x: auto;  
+    min-height: 100vh;
+    display: flex;
+    color:white;
+}
+
+.curso_list li{
+    color:white;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    position:relative;
+    margin: 25px 0;
+
+    padding-bottom: 16px;
+    padding-left: 10px;
+    max-width: 500px;
+    width:460px;
+    min-width: 350px;
+    height: 250px;
+    max-height: 250px;
+    border-radius: 8px;
+}
+
+.curso_list li:nth-child(5){
+    background-image:linear-gradient(180deg, rgba(14, 23, 47, 0.0001) 11.72%, #220606 100%), url('/Fotos/Brigadista_Particular.png');
+    background-position:bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.curso_list li:nth-child(3){
+    background-image:linear-gradient(180deg, rgba(14, 23, 47, 0.0001) 11.72%, #221106 100%), url('/Fotos/Brigadista_Voluntario.png');
+    background-position:bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.curso_list li:nth-child(1){
+    background-image:linear-gradient(180deg, rgba(14, 23, 47, 0.0001) 11.72%, #001318 100%), url('/Fotos/Bombeiro_Mirim.png');
+    background-position:bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.curso_list ul li span{
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+}
+
+.description{
+    display: flex;
+    margin-top: 40px;
+    flex-flow: column wrap;
+    color:lightgrey;
+    max-width: 950px;
+}
+
+.description h1{
+    text-transform: uppercase;
+    color:#f9ffc4;
+}
+
+.description p{
+    font-weight:initial;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.curso_list ul{
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    margin-left: 20px;
+    gap: 2rem;
+}
+
+.curso_list li button{
+    position:absolute;
+    inset: 0;
+    margin:auto;
+    transform: translateY(40px);
+    height: 50px;
+    width: 150px;
+    border: none;
+    background:rgb(40, 40, 40);
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    
+}
+
+.curso_list li:hover button{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.curso_list button:hover{
+    background:rgb(73, 73, 73);
+}
+
+.curso_list li:hover span{
+    font-size: 20px;
+}
+
+.curso_list li:nth-child(5):hover{
+    background-image:linear-gradient(180deg, rgba(14, 23, 47, 0.3)0%, #160404 100%), url('/Fotos/Brigadista_Particular.png');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.curso_list li:nth-child(3):hover{
+    background-image:linear-gradient(180deg, rgba(14, 23, 47, 0.3)0%, #160b04 100%), url('/Fotos/Brigadista_Voluntario.png');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.curso_list li:nth-child(1):hover{
+    background-image:linear-gradient(180deg, rgba(14, 23, 47, 0.3)0%, #001318 100%), url('/Fotos/Bombeiro_Mirim.png');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#sobre p{
+    max-width: 650px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.inicio_conteudo{
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image:radial-gradient(rgba(14, 23, 47, 0.0001) 11.72%, #161616 100%);
+    padding: 10px 0;
+    background-color: rgb(48, 48, 48);
+    color:lightgray;
+}
+
+.form-content button{
+    width:150px;
+    height: 75px;
+    font-size: 25px;
+    text-transform: uppercase;
+    border: none;
+    margin: 1rem auto;
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+
+.button_enviar:hover{
+    background-color:rgb(75, 75, 75);
+    border:double;
+    border-color: black;
+}
+
+.inicio_conteudo h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.partners{
+    background: rgba(0,0,0,0.4);
+    padding: 25px 0;
+}
+
+.partners ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 10px;
+    flex-flow: row wrap;
+}
+
+.partners img{
+    max-width: 100%;
+    width: 500px;
+    min-width: 300px;
+    height:100%;    
+}
+
+.location{
+    display:flex;
+    margin: 0 auto;
+
+    border: double;
+    border-width: 10px;
+    color: gray;
+    width:100%;
+    max-width: 600px;
+
+    position:relative;
+}
+
+.local{
+    background-image: url('/Fotos/BrigadaLogo.png');
+    background-position: 150px;
+    background-size: 450px;
+    background-repeat:no-repeat;
+}
+
+.local2{
+    position:relative;
+    flex-flow: column wrap;
+}
+
+.local2 span{
+    display:flex;
+    justify-content: center;
+    position: relative;
+}
+
+.local2 p{
+    display:flex;
+    justify-content: center;
+    position: relative;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 30px;
+
+    background-image: radial-gradient(rgba(14, 23, 47, 0.0001) 11.72%, #161616 100%);
+    background-color: rgb(48, 48, 48);
+    color:white;
+}
+
+.social-medias{
+    display: flex;
+    justify-content: center;
+}
+.social-medias a{
+    color:white;
+    text-decoration: none;
+    margin: 20px 5px;
+}
+.social-medias a img{
+    width:20px;
+}
+
+.contact-form{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    background-image: radial-gradient(rgba(14, 23, 47, 0.0001) 11.72%, #161616 100%);
+    background-color: rgb(48, 48, 48);
+    color:white;
+    min-height: 100vh;
+}
+
+.contact-title h1{
+    font-size: 4rem;
+    
+}
+
+.contact-title{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    align-items:center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.contact-title p{
+    font-size: 1rem;
+    margin-bottom: 6rem;
+    padding-left: -0.2rem;
+    text-align: center;
+}
+
+.contact-form p{
+    max-width: 650px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.form-content span{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.form-content p{
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    z-index: 1;
+}
+
+.form-content{
+    margin-top: 6rem;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    margin-left: 15%;
+}
+
+.contact-form img{
+    position: absolute;
+    margin: 20rem 65rem;
+    opacity: 0.7;
+    width:50rem;
+    max-width:100%;
+}
+
+.form{
+    max-width: 40rem;
+    width: 100%;
+    min-height: auto;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.input{
+    border: black;
+    background: lightgray;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 10px;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+textarea{
+    font-size: 2rem;
+    height: 100px;
+    resize: none;
+    z-index: 1;
+}
+
+form label{
+    margin-bottom: 5px;
+    width:100%;
+    z-index: 1;
+}
+
+.close-menu{
+    display: none;
+}
+
+@media (max-width: 50rem) {
+    .form-content{
+        display: flex;
+        margin: 0 0.5rem;
+    }
+    .contact-title h1{
+        display: flex;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-content img{
+        display: none;
+    }
+
+    .form-content button{
+        display: flex;
+        text-align: center;
+        width: 15rem;
+        margin-top: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu{
+        bottom:0;
+        left: 15rem;
+        text-align: center;
+        display: none;
+    }
+
+    .menu-content, .menu-content ul{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-content{
+        height: 25rem;     
+    }
+
+    .menu-spacing{
+        display: none;
+    }
+
+    .close-menu-label::after{
+        content: '☰';
+        position: fixed;
+        z-index: 3;
+        top:1rem;
+        right: 1.5rem;
+        background: rgb(48, 48, 48);
+        color: white;
+        font-size: 2rem;
+        line-height: 2rem;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        padding: 0.1rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu{
+        display: block;
+    }
+
+    .close-menu:checked~.menu-content{
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after{
+        display: block;
+        content: '×'; 
+    }
+
+
+}

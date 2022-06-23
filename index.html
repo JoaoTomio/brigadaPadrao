@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Brigada Padrão</title>
+    <meta name="description" content="Nossa Brigada" />
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/jpg" href="/Fotos/Logo.ico" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS STYLE LINK -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+</head>
+
+<body>
+    <input type="checkbox" aria-label="Close menu" id="close-menu" class="close-menu" role="button">
+    <label for="close-menu" class="close-menu-label" title="close-menu"></label>
+    <aside class="menu">
+        <div class="menu-content">
+            <h1 onclick="getElementById('close-menu').checked = false;">
+                <a href="#inicio">
+                    <img src="/Fotos/BrigadaLogo.png" alt="Logo Brigada Padrão">
+                </a>
+            </h1>
+            <nav>
+                <ul onclick="getElementById('close-menu').checked = false;">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div class="menu-spacing"></div>
+
+    <main>
+        <div id="inicio">
+            <h1>Briagada Padrão</h1>
+        </div>
+        <div class="inicio_conteudo">
+            <h2>Nossas Parcerias</h2>
+            <div class="partners">
+                <ul>
+                    <li>
+                        <img src="/Fotos/Indaial.png" alt="">
+                    </li>
+                    <li>
+                        <img src="/Fotos/Ascurra.png" alt="">
+                    </li>
+                    <li>
+                        <img src="/Fotos/Indaial.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="local">
+                <h2>Nossa localização</h2>
+                <div class="location">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3556.4320061259627!2d-49.30722018434257!3d-26.95321550138781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df0147194129e7%3A0xca057b7b71dc66fc!2sBrigada%20Padr%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1655556496417!5m2!1spt-BR!2sbr"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="local2">
+                    <span>Brigada Padrão</span>
+                    <p>BR 470 KM 79 - Rio Morto, Rodeio - SC, 89136-000</p>
+                </div>
+            </div>
+        </div>
+        <div id="cursos">
+            <h2>Cursos</h2>
+            <div class="curso_list">
+                <ul>
+                    <li>
+                        <span>Bombeiro Mirim</span>
+                        <button type="button">Ver Mais</button>
+                    </li>
+                    <div class="description">
+                        <h1>Bombeiro Mirim</h1>
+                        <p>A vida sem sonhos, sejam eles pequenos ou enormes,
+                            não tem a menor graça.
+                            Por isso, a cada nova conquista, coloque uma nova meta.
+                            Trace planos para o dia, para a semana, este mês.
+                            para este ano e os próximos 10 anos.</p>
+                    </div>
+                    <li>
+                        <span>Brigadista Voluntário</span>
+                        <button type="button">Ver Mais</button>
+                    </li>
+                    <div class="description">
+                        <h1>Brigadista Voluntário</h1>
+                        <p>A vida sem sonhos, sejam eles pequenos ou enormes,
+                            não tem a menor graça.
+                            Por isso, a cada nova conquista, coloque uma nova meta.
+                            Trace planos para o dia, para a semana, este mês.
+                            para este ano e os próximos 10 anos.</p>
+                    </div>
+                    <li>
+                        <span>Brigadista Particular</span>
+                        <button type="button">Ver Mais</button>
+                    </li>
+                    <div class="description">
+                        <h1>Brigadista Particular</h1>
+                        <p>A vida sem sonhos, sejam eles pequenos ou enormes,
+                            não tem a menor graça.
+                            Por isso, a cada nova conquista, coloque uma nova meta.
+                            Trace planos para o dia, para a semana, este mês.
+                            para este ano e os próximos 10 anos.</p>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div id="contato">
+            <div class="contact-form">
+                <section class="contact-title">
+                    <h1>Precisa de ajuda?</h1>
+                    <p>Use nosso campo de contato para tirar suas duvidas! Ou nos contate pelo Whatsapp!</p>
+                </section>
+                <div class="form-content">
+                    <span>Contate-nos</span>
+                    <p>Campo para fazer contato</p>
+                    <form class="form">
+                        <label>Nome</label>
+                        <input type="text" name="nome" class="input">
+                        <label>E-mail</label>
+                        <input type="email" name="email" class="input">
+                        <label>Assunto</label>
+                        <textarea maxlength="250" name="assunto" cols="40" rows="4" class="input"></textarea>
+                        <input type="hidden">
+                        <button type="button" class="button_enviar">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+                <img src="/Fotos/undraw_contact_us_re_4qqt.svg" alt="a people with telephone, tablet and a computer">
+            </div>
+        </div>
+
+        <section id="sobre">
+            <h2>Sobre nós</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non eius sequi architecto perferendis
+                perspiciatis explicabo voluptate soluta vel, temporibus possimus deleniti porro
+                nihil error repudiandae. Officia aliquam culpa aut odio?</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>©2022-Brigada Padrão LTDA.</p>
+                <div class="social-medias">
+                    <a class="social-icon" href="https://www.facebook.com/brigadapadrao" title=" Página no Facebook">
+                        <img src="/Fotos/Facebook.png" alt="insta-image">
+                    </a>
+                    <a class="social-icon" href="https://www.instagram.com/brigadapadrao" title=" Página no Instagram">
+                        <img src="/Fotos/Instagram.png" alt="insta-image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/index.js"></script>
+</body>
+
+</html>
